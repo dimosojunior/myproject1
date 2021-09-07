@@ -1,0 +1,107 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <script type="applijewelleryion/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <link href="{% static 'blog/css/bootstrap.css' %}" rel='stylesheet' type='text/css' />
+    <link href="css/style.css" rel='stylesheet' type='text/css' />
+    
+    <!-- Custom Theme files -->
+    <link href="{% static 'blog/css/animate.css' %}" rel="stylesheet" type="text/css" media="all">
+    <script src="js/wow.min.js"></script><script src="js/jquery-1.12.0.min.js"></script>
+    <script src="{% static 'blog/js/bootstrap.min.js' %}"></script>
+      <link rel="stylesheet" href="kaz/activity/css/style.css">
+</head>
+<body>
+    
+  
+    
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        
+        <script type="applijewelleryion/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+        <link href="{% static 'blog/css/bootstrap.css' %}" rel='stylesheet' type='text/css' />
+        <link href="css/style.css" rel='stylesheet' type='text/css' />
+        
+        <!-- Custom Theme files -->
+        <link href="{% static 'blog/css/animate.css' %}" rel="stylesheet" type="text/css" media="all">
+        <script src="js/wow.min.js"></script><script src="js/jquery-1.12.0.min.js"></script>
+        <script src="{% static 'blog/js/bootstrap.min.js' %}"></script>
+          <link rel="stylesheet" href="kaz/activity/css/style.css">
+        <style>
+             input{
+                padding: 5px;
+                border-radius: 10px;
+                margin-bottom: 30px;
+                width: 8cm;
+            }
+          
+        </style>
+    </head>
+    <body>
+        {% if messages %}
+        {% for message in messages %}
+          <div style="margin-top:5rem;" class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+            {{message}}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+        {% endfor %}
+      {% endif %}
+    
+      <div class="container-fluid">
+        <div class="row">
+    
+        <div class="col-md-4">
+          <div class="photo">
+            <img src="{% static 'blog/images/w.jpeg' %}" alt="" style="width: 500px;">
+        
+        </div><!--mwisho wa column 4-->
+        </div>
+    
+       <div class="col-md-6"> 
+    
+      <div style="text-align: center;margin-top: 5px;background-color: lightblue;">
+         <h1 style="font-family: bold;">Add Product</h1>
+    <form action="" method="POST">
+        {% csrf_token %}
+ {{form.as_p}}
+    
+    <button type="add_product">add product</button>
+    
+    </form>
+    </div>
+    </div><!--mwisho wa column ya width 6-->
+    </div><!--mwisho wa row-->
+    </div><!--mwisho wa column-->
+        <script src={% static 'blog/"js/wow.min.js' %}"></script><script src="js/jquery-1.12.0.min.js"></script>
+    <script src="{% static 'blog/js/bootstrap.min.js' %}"></script>
+    </body>
+    </html>
+   
+
+    <script src={% static 'blog/"js/wow.min.js' %}"></script><script src="js/jquery-1.12.0.min.js"></script>
+    <script src="{% static 'blog/js/bootstrap.min.js' %}"></script>
+</body>
+</html>
+{% endblock %}

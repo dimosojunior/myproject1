@@ -1,0 +1,99 @@
+{% extends 'blog/base.html' %}
+
+
+{% load static %}
+{% block title %}About{% endblock %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Blog Post </title>
+  <script type="applijewelleryion/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+  <link href="{% static 'blog/css/bootstrap.css' %}" rel='stylesheet' type='text/css' />
+  <link href="css/style.css" rel='stylesheet' type='text/css' />
+  
+  <!-- Custom Theme files -->
+  <link href="{% static 'blog/css/animate.css' %}" rel="stylesheet" type="text/css" media="all">
+  <script src="js/wow.min.js"></script><script src="js/jquery-1.12.0.min.js"></script>
+  <script src="{% static 'blog/js/bootstrap.min.js' %}"></script>
+</head>
+<body>
+  
+
+  
+ 
+
+
+
+
+<main>
+  <div class="container">
+
+    <div class="row">
+
+<div class="col-md-12">
+     
+    <section class="text-center mb-4 mt-3">
+      <div class="row wow fadeIn">
+
+        {% for object in products %}
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card">
+            <div class="view overlay">
+              <a href="{% url 'service_detail' object.pk %}" class="dark-grey-text" style="text-decoration: none;color: red;">
+                <h5 style="color: black;font-weight: ;">{{object.name}}</h5>
+                <img src="{{object.image.url}}" class="card-img-top"
+                alt="">
+              </a>
+                <div class="mask rgba-white-slight"></div>
+              </a>
+            </div>
+            <div class="card-body text-center">
+              <a href="{% url 'service_detail' object.pk %}" class="grey-text">
+                
+              
+              <h5>
+                <strong>
+                     <span class="badge badge-pill {{object.get_label_display}}-color">NEW</span>
+                    <button style="color: white;font-weight: bold;font-size: 18px;font-family: bold;background-color: black;">View</button>
+          
+                  </a>
+                </strong>
+              </h5>
+              <h4 class="font-weight-bold blue-text">
+                {% if object.discount_price %}
+                <p style="color: blueviolet;font-weight: bold;font-size: 18px;margin-left: 20px;font-family: bold;">Discount Price:${{object.discount_price}}</p>
+              <del>  <strong style="font-weight: bold;font-size: 15px;">Price:${{object.price}}</strong></del>
+                
+                {% else %}
+                <p style="color: blueviolet;font-weight: bold;font-size: 18px;margin-left: 20px;font-family: bold;">Price:${{object.price}}</p>
+          
+                {% endif %}
+              </h4>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+  
+
+</div><!--mwisho wa column ya width 9-->
+
+    </div><!--mwisho wa row kubwa-->
+    
+  </div><!--mwisho wa container-->
+</main>
+
+
+<script src={% static 'blog/"js/wow.min.js' %}"></script><script src="js/jquery-1.12.0.min.js"></script>
+<script src="{% static 'blog/js/bootstrap.min.js' %}"></script>
+</body>
+</html>
+{% endblock content %}

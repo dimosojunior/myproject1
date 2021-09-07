@@ -1,0 +1,44 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <script type="applijewelleryion/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <link href="{% static 'blog/css/bootstrap.css' %}" rel='stylesheet' type='text/css' />
+    <link href="css/style.css" rel='stylesheet' type='text/css' />
+    
+    <!-- Custom Theme files -->
+    <link href="{% static 'blog/css/animate.css' %}" rel="stylesheet" type="text/css" media="all">
+    <script src="js/wow.min.js"></script><script src="js/jquery-1.12.0.min.js"></script>
+    <script src="{% static 'blog/js/bootstrap.min.js' %}"></script>
+      <link rel="stylesheet" href="kaz/activity/css/style.css">
+</head>
+<body>
+    {% if messages %}
+    {% for message in messages %}
+      <div style="margin-top:5rem;" class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+        {{message}}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    {% endfor %}
+  {% endif %}
+    <h1 style="text-align: center;font-family: bold;color: green;">WELCOME  TO  MY WEBSITE</h1>
+
+    <div class="photo">
+        <img src="{% static 'blog/images/w.jpeg' %}" alt="">
+
+    </div>
+ 
+    <script src={% static 'blog/"js/wow.min.js' %}"></script><script src="js/jquery-1.12.0.min.js"></script>
+<script src="{% static 'blog/js/bootstrap.min.js' %}"></script>
+</body>
+</html>
+{% endblock %}
